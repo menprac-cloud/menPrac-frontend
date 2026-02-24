@@ -28,10 +28,13 @@ const Settings = () => {
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem("aura_token");
-        const res = await fetch("http://localhost:5000/api/users/profile", {
-          headers: { Authorization: `Bearer ${token}` },
-          credentials: "include", // THIS IS THE MAGIC LINE
-        });
+        const res = await fetch(
+          "https://menprac-backend.onrender.com//api/users/profile",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+            credentials: "include", // THIS IS THE MAGIC LINE
+          },
+        );
 
         if (!res.ok) throw new Error("Failed to fetch profile");
         const data = await res.json();
@@ -53,15 +56,18 @@ const Settings = () => {
 
     try {
       const token = localStorage.getItem("aura_token");
-      const res = await fetch("http://localhost:5000/api/users/profile", {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
+      const res = await fetch(
+        "https://menprac-backend.onrender.com/api/users/profile",
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(formData),
+          credentials: "include", // THIS IS THE MAGIC LINE
         },
-        body: JSON.stringify(formData),
-        credentials: "include", // THIS IS THE MAGIC LINE
-      });
+      );
 
       if (!res.ok) throw new Error("Failed to update settings");
 
