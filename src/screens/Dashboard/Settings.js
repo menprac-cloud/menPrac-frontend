@@ -29,7 +29,7 @@ const Settings = () => {
       try {
         const token = localStorage.getItem("aura_token");
         const res = await fetch(
-          "https://menprac-backend.onrender.com//api/users/profile",
+          "https://menprac-backend.onrender.com/api/users/profile",
           {
             headers: { Authorization: `Bearer ${token}` },
             credentials: "include", // THIS IS THE MAGIC LINE
