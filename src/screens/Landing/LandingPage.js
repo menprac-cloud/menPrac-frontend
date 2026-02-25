@@ -180,9 +180,10 @@ const LandingPage = () => {
               </span>
             </h1>
             <p style={styles.p}>
-              Automate clinical documentation. Track behavioral progress
-              instantly. Increase clinical outcomes. All from one secure,
-              AI-powered platform.
+              Automate documentation. Track patient journeys in real time.
+              Optimize workflows across your entire organization. Improve care
+              quality and operational efficiency all within one secure,
+              AI-powered platform
             </p>
             <div
               className="mobile-center-flex"
@@ -251,8 +252,10 @@ const LandingPage = () => {
       <section className="section-container" style={{ textAlign: "center" }}>
         <h2 style={styles.h2}>Clinical administration is slowing you down.</h2>
         <p style={{ ...styles.p, maxWidth: "700px", margin: "0 auto 60px" }}>
-          BCBAs and RBTs are burning out from paperwork instead of focusing on
-          patient care.
+          The use of multiple practice management is simplified with MenPrac
+          providing opportunities for clinical information and data management,
+          multiple practices, scheduling, AI assistant for data interpretation
+          and documentation, and HR tool for payroll.
         </p>
 
         <div style={styles.grid3}>
